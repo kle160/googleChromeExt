@@ -1,19 +1,47 @@
 h1 {
     text-align: center;
+    height: 25px; 
+    background: #f60; 
+    color:#222;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-family: verdana,helvetica, arial, sans-serif;
+  
 }
 
 p {
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 0px;
+    /* width: 400px; */
+    /* margin-bottom: 25px; */
+    top: 15px
+}
+
+.story-container {
+  margin-bottom: 25px;
+  width: 400px;
+  top: 15px
 }
 
 button {
-    background-color: #4CAF50; /* Green */
+    background-image: url(images/copybutton.png);
     border: none;
     color: white;
-    padding: 7.5px 16px;
-    text-align: center;
+    padding: 8px 8.5px;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    position: relative;
+    left: 7.5px; 
+
+}
+
+body {
+    background:#F6F6EF;
+    border: 10px solid #fff; 
+    float:left; 
+    margin: 5px;
+    font-family: verdana,helvetica, arial, sans-serif;
+    font-size: 9pt;
+    /* width: 400px; */
+    /* width: 100%; */
 }

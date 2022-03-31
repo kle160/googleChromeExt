@@ -1,77 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-
-  // function populateFeed(data){
-  //   const hnFeed = document.querySelector('body');
-    
-  //   // for (let index = 0; index < 15; index++) {
-  //     let newParagraph = document.createElement('p');
-  //     const messageObj = data[index];
-  //     // chatRoom.innerHTML = data[index].message;
-  //     newParagraph.innerHTML = messageObj.message;
-  //     hnFeed.appendChild(newParagraph);
-  //   }
-  // }
-  
-// code to fetch data from Hackernews api
+ 
+// code to fetch top stories data from Hackernews api
   fetch('https://hacker-news.firebaseio.com/v0/topstories.json?')
     .then((data) => data.json())
     .then((data)=> getStorydata(data))
-        //console.log(data))
-        //slice the first ten data points of the API
-
-        //loop through the ten data 
     .catch(error => console.log(`Im the error ${error}`));
 
 //Showing top 10 sories from the data
   function getStorydata(storyArray) {
-
     // Iteration through the first 10 elements of the the JSON data
     for (let index = 0; index < 10; index++) {
       const story = storyArray[index];
       fetch(`https://hacker-news.firebaseio.com/v0/item/${story}.json?`)
       .then((data) => data.json())
       .then((data) => populateNews(data, index))
-      .then((data) => console.log(data))
+      // .then((data) => console.log(data))
       .catch(error => console.log(`Im the error ${error}`));
     }
 
   // Where we keep the entirety of the DOM
   function populateNews(data, index) {
+
+    let newDiv = document.createElement('div');
+    newDiv.setAttribute('class', 'story-container');
+
     let newParagraph = document.createElement('p');
-    // newParagraph.setAttr
+
     let newLink = document.createElement('a');
     newLink.setAttribute('href', data.url);
     newLink.innerText = data.title;
+
     let newButton = document.createElement('button');
-    // newButton.setAttribute('onclick', copy);
-    newButton.addEventListener('click',() => {
-          let url = data.url;
-          copy(url);
-    });
+    newButton.addEventListener('click', () => {
+      let url = data.url;
+      copy(url);
+      });
+
+    let storyId = data.id;
+    let storyThread = `https://news.ycombinator.com/item?id=${storyId}`;
     
+    let newThreadLink = document.createElement('a');
+    newThreadLink.setAttribute('href', storyThread);
+    newThreadLink.innerText = 'HN Discussion Link';
 
-
-    // <button onclick=copy(newLink)></button>
-    // newParagraph.innerText = `${data.title} \n Article Score: ${data.score} \n Comments: ${data.descendants} \n ${data.url}`;
     newParagraph.innerText = `Article Score: ${data.score} \n Comments: ${data.descendants}`;
-    // newParagraph.appendChild(newLink);
-    // newParagraph.innerHTML = newLink;
-    // n
-    document.body.appendChild(newLink);
-    document.body.appendChild(newButton);
-    document.body.appendChild(newParagraph);
-    
+
+    document.body.appendChild(newDiv);
+    newDiv.appendChild(newLink);
+    newDiv.appendChild(newButton);
+    newDiv.appendChild(newParagraph);
+    newDiv.appendChild(newThreadLink);
+   
     return data;    
   }
 
   // Function to create a copy link option
   function copy(url) {
-    console.log(url);
     window.prompt("Copy URL link below: Ctrl+C ", url)
   }
-
-
   }
 });
 

@@ -14,7 +14,7 @@ Features:
     [*] Links to redirect users to the articles
 [1] Job search Tab
 [X] Filter posts by specific categories
-[1/2] Tracker for how many news articles users have read over their lifetime
+[X] Tracker for how many news articles users have read over their lifetime
 [X] Top 3 articles for day 
 [2/3] Store articles to come back to and read later
 [*] Copy link to share with friend
@@ -37,6 +37,20 @@ Sprint #1:
 [x] Create HTML File
 [x] Insert Image
 
+Sprint #2:
+[x] Create Popup
+[x] Show Data in Popup
+[x] Change URL to hyperlinks
 
-Technical Challange:
--Making sure the articles are time
+Sprint #3:
+[x] Link to comment thread
+[x] CSS 
+
+Technical Challenges:
+-Making sure articles are the first recent top 10
+-Creating a hyperlink for the title of each article
+-Adding a link to comment discussions
+
+Stretch Goals:
+-Header on top move down (CSS Problem)
+
