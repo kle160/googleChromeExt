@@ -47,7 +47,9 @@ Sprint #3:
 [x] CSS 
 
 Technical Challenges:
--Making sure articles are the first recent top 10
+-Understanding API data structure and how to access exactly what we were after
+-Rendering on DOM in different order than we would expect....fetch calls resolving out of sequence of being run
+-Ability to copy to user's clipboard
 -Creating a hyperlink for the title of each article
 -Adding a link to comment discussions
 
