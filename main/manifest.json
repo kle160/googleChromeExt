@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "CS Tech News",
+    "description": "Takes top news news.ycombinator.com",
+    "version": "1.0",
+    "icons": {
+          "16": "/images/hnews16.png",
+          "64": "/images/hnews64.png",
+          "128": "/images/hnews128.png"
+
+    },
+    // "page_action": {
+    //     "default_icon": {
+    //         "16": "/images/hnews16.png",
+    //         "64": "/images/hnews64.png",
+    //         "128": "/images/hnews128.png"
+    //     }
+    // },
+    "action":{
+      "default_popup": "index.html",
+      "default_title": "Hacker News Feed"
+  }
+}
+

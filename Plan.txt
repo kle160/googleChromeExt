@@ -1,0 +1,42 @@
+Project Name: CS Tech News
+Authors: Ricky Johson & Kevin Le
+HackerNews API: https://github.com/HackerNews/API
+
+Table Contents:
+[X]: Not needed
+[*]: MVP features
+[1]: For first update
+[2]: For second update
+[3]: For third update
+
+Features:
+[*] Top 10 highest scored articles over the last X amount of time (user-specified)
+    [*] Links to redirect users to the articles
+[1] Job search Tab
+[X] Filter posts by specific categories
+[1/2] Tracker for how many news articles users have read over their lifetime
+[X] Top 3 articles for day 
+[2/3] Store articles to come back to and read later
+[*] Copy link to share with friend
+[3] Search for articles submitted by a specific username
+[2] Search articles bar
+[1] Article refresher if you don't like the X amount of selection
+[2] Retrieve total comment count alongside the story/article
+[3] Social sharing for Twitter, Facebook, Google+, Buffer
+
+
+Minimal Viable Product(*):
+[*] Top 10 highest scored articles over the last X amount of time (user-specified)
+    [*] Links to redirect users to the articles
+[*] Copy link to share with friend
+
+Sprint #1:
+[x] Manifest JSON
+[x] Check Data
+[x] Create CSS File
+[x] Create HTML File
+[x] Insert Image
+
+
+Technical Challange:
+-Making sure the articles are time

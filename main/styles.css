@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7.5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
